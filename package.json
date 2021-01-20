@@ -23,6 +23,7 @@
     "fonts": "startupjs fonts"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@react-native-community/datetimepicker": "^3.0.6",
     "@react-native-picker/picker": "^1.9.3",

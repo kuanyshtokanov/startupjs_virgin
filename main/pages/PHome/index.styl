@@ -1,3 +1,32 @@
 .root
-  padding 2u 0
   flex 1
+  background-color #e5e5e5
+  background-image url(/background.png)
+  background-size cover
+  background-position top
+  background-repeat no-repeat
+  padding 1u 2u
+  position relative
+  +desktop()
+    padding 2u 1u
+  +wide()
+    padding 4u 8u
+
+.container
+  padding 2u
+
+.break
+  display none
+  +desktop()
+    display flex
+    margin-bottom 4u
+
+.txt
+  +desktop()
+    display flex
+    font-size 8u
+    line-height 15u
+    letter-spacing 0.15em
+    font-weight 300
+    text-transform uppercase
+    color white
