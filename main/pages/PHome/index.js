@@ -10,9 +10,10 @@ export default observer(function PHome() {
   return pug`
     Layout.root
       Div.container
-        Header
-        Div.break
-          Span.txt Bare it!
-        Main
+        Portal.Provider
+          Header
+          Div.break
+            Span.txt Bare it!
+          Main
   `
 })

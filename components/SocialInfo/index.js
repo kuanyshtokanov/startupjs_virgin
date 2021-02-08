@@ -13,13 +13,13 @@ const SocialInfo = () => {
 
   return pug`
     Div.container
-      Link
+      Link(to='#')
         Icon.icon(size='xl' icon=faFacebook)
-      Link
+      Link(to='#')
         Icon.icon(size='xl' icon=faInstagram)
-      Link
+      Link(to='#')
         Icon.icon(size='xl' icon=faLinkedin)
-      Link
+      Link(to='#')
         Icon.icon.last(size='xl' icon=faTwitter)
   `
 }

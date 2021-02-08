@@ -26,8 +26,8 @@ const Tabs = ({ children }) => {
   return pug`
     Div.tabs
       Div.header
-        each tab in tabs
-          TabItem(tabData=tab onChange=setCurrentTab active=tab.title===currentTab)
+        each tab, index in tabs
+          TabItem(key=index tabData=tab onChange=setCurrentTab active=tab.title===currentTab)
       Div.content #{children}
   `
 }

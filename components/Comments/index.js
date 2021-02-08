@@ -10,8 +10,8 @@ const Comments = ({
 }) => {
   return pug`
     Div.comments
-      each comment in comments
-        Comment(...comment)
+      each comment, index in comments
+        Comment(key=index ...comment)
       CommentForm
   `
 }

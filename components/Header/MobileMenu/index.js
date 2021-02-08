@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Image, TouchableOpacity, Text } from 'react-native'
-import { Div, Drawer, Link, Menu, Button, Icon } from '@startupjs/ui'
+import { Div, Drawer, Link, Menu, Button, Icon, DrawerSidebar } from '@startupjs/ui'
 import {
   faBars,
   faTimes,
@@ -21,20 +21,20 @@ const MobileMenu = ({ open, handleDrawer }) => {
       Div.sidebar
         Image.img(source={ uri: 'main-logo-white.png' })
         Menu.menu
-          Link.item Valentines
-          Link.item
+          Link(to='#').item Valentines
+          Link(to='#').item
             Text.item V
             Icon.item(icon=faHeart)
             Text.item peeps
-          Link.item
+          Link(to='#').item
             Text.item V
             Icon.item(icon=faHeart)
             Text.item prep
-          Link.item Bare it
-          Link.item Culture
-          Link.item Tribe
-          Link.item Resources
-          Link.item Vowell
+          Link(to='#').item Bare it
+          Link(to='#').item Culture
+          Link(to='#').item Tribe
+          Link(to='#').item Resources
+          Link(to='#').item Vowell
         SocialInfo
         Div.avatar
           Profile
