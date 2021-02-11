@@ -1,19 +1,23 @@
 .root
   flex 1
+
+.container
+  padding 1u 2u
   background-color #e5e5e5
-  background-image url(/background.png)
+  background-image url('./background.png')
   background-size cover
   background-position top
   background-repeat no-repeat
-  padding 1u 2u
   position relative
   +desktop()
     padding 2u 1u
   +wide()
     padding 4u 8u
 
-.container
-  padding 2u
+.img
+  flex 1
+  resize-mode cover
+  justify-content center
 
 .break
   display none

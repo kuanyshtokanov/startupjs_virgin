@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import { Image } from 'react-native'
+import React from 'react'
+import { View } from 'react-native'
 import { Div, H3 } from '@startupjs/ui'
+import MakeLoveText from '../../../public/make-love-text.svg'
 
 import './index.styl'
 
 const TopPart = () => {
-
   return pug`
     Div.root
-      Image.img(source={uri:'/make-love-text.svg'})
+      View.imgWrapper
+        MakeLoveText
       H3.hashtag #mlsh
   `
 }

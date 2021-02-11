@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Image, TouchableOpacity, Text } from 'react-native'
-import { Div, Drawer, Link, Menu, Button, Icon, DrawerSidebar } from '@startupjs/ui'
+import { Div, Link, Menu, Icon } from '@startupjs/ui'
 import {
-  faBars,
   faTimes,
-  faHeart,
+  faHeart
 } from '@fortawesome/free-solid-svg-icons'
+import { BASE_URL } from '@env'
 
 import Profile from '../../Profile'
 import SocialInfo from '../../SocialInfo'
 import './index.styl'
 
 const MobileMenu = ({ open, handleDrawer }) => {
+  const base = BASE_URL
 
   return pug`
     Div.root
@@ -19,7 +20,7 @@ const MobileMenu = ({ open, handleDrawer }) => {
         TouchableOpacity(onPress=handleDrawer)
           Icon.delete(size='xl' icon=faTimes)
       Div.sidebar
-        Image.img(source={ uri: 'main-logo-white.png' })
+        Image.img(source={ uri: base+'/main-logo-white.png' })
         Menu.menu
           Link(to='#').item Valentines
           Link(to='#').item
