@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native'
-import { observer } from 'startupjs'
 import { Div, Icon } from '@startupjs/ui'
 import {
-  faBars,
+  faBars
 } from '@fortawesome/free-solid-svg-icons'
 
 import './index.styl'
@@ -14,6 +13,16 @@ import Profile from '../Profile'
 
 const Header = () => {
   const [open, setDrawer] = useState(false)
+  const menuItems = [
+    'VALENTINES',
+    'PEEPS',
+    'PREP',
+    'BARE IT',
+    'CULTURE',
+    'TRIBE',
+    'RESOURCES',
+    'VOWEL'
+  ]
 
   const handleDrawer = () => {
     setDrawer(!open)
@@ -31,9 +40,9 @@ const Header = () => {
                 Icon.bars(styleName=[{ hidden:!open }] size='xl' icon=faBars)
         Div.menuSmall
           Div.mobileMenu(styleName=[{ visible:open }])
-            MobileMenu(open=open handleDrawer=handleDrawer)
+            MobileMenu(open=open menuItems=menuItems handleDrawer=handleDrawer)
         Div.menuBig
-          DesktopMenu
+          DesktopMenu(menuItems=menuItems)
       Div.right
         Profile
   `

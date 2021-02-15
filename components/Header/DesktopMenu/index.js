@@ -1,21 +1,29 @@
 import React from 'react'
-import { observer } from 'startupjs'
-import { Menu, Link } from '@startupjs/ui'
+import { Text } from 'react-native'
+import { Menu, Link, Icon, Row } from '@startupjs/ui'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 import './index.styl'
-import Logo from '../../Logo'
 
-const DesktopMenu = () => {
+const DesktopMenu = ({ menuItems }) => {
   return pug`
     Menu.root
-      Link(to='#').menuItem Valentines
-      Link(to='#').menuItem Vopeeps
-      Link(to='#').menuItem Voprep
-      Link(to='#').menuItem Bare it
-      Link(to='#').menuItem Culture
-      Link(to='#').menuItem Tribe
-      Link(to='#').menuItem Resources
-      Link(to='#').menuItem Vowell
+      each item, index in menuItems
+        case item
+          when 'PREP'
+            Link(key=index to='#')
+              Row.linkItem
+                Text.item V
+                Icon.icon(icon=faHeart)
+                Text.item=item
+          when 'PEEPS'
+            Link(key=index to='#')
+              Row.linkItem
+                Text.item V
+                Icon.icon(icon=faHeart)
+                Text.item=item
+          default
+            Link(key=index to='#').menuItem=item
         
   `
 }

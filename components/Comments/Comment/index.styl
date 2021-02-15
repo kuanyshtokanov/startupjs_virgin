@@ -1,6 +1,5 @@
-.comment
-  flex-direction row
-  margin-bottom 2u
+.left
+  margin-top 1u
 
 .center
   margin-left 2u
@@ -8,14 +7,20 @@
   padding-bottom 1u
   border-bottom 1px solid #d4d4d4
   flex-shrink 1
+  margin-top 1u
+  &.last
+    border none
 
 .right
-  // margin-left 1u
   border-bottom 1px solid #d4d4d4
+  margin-top 1u
+  &.last
+    border none
 
 .date
-  font-size 1.5u
+  font(s)
   color rgba(0, 0, 0, 0.4)
 
-.author, .delete
+.author,
+.delete
   color #cc000c

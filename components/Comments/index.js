@@ -1,5 +1,5 @@
 import React from 'react'
-import { Div, Span } from '@startupjs/ui'
+import { Div } from '@startupjs/ui'
 
 import Comment from './Comment'
 import CommentForm from './CommentForm'
@@ -11,7 +11,7 @@ const Comments = ({
   return pug`
     Div.comments
       each comment, index in comments
-        Comment(key=index ...comment)
+        Comment(key=index ...comment last=index===comments.length-1)
       CommentForm
   `
 }

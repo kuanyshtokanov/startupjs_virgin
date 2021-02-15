@@ -16,13 +16,13 @@ const Event = ({
     Div.root
       Div.wrapper
         Div.left
-          Span.weekDay #{weekDay}
-          Span.month #{month}
-          Span.day #{day}
+          Span.weekDay=weekDay
+          Span.month=month
+          Span.day=day
         Div.center
-          Span.title #{title}
-          Span.location #{location}
-          Span.time #{time}
+          Span.title=title
+          Span.location=location
+          Span.time=time
         Div.right
           Icon.icon( icon=faChevronDown size='xl' )
       Div.line(styleName=[{ last }])

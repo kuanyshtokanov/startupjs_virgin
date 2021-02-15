@@ -20,7 +20,7 @@ export default observer(function PHome () {
   return pug`
     ScrollView.root
       Layout
-        ImageBackground(source={uri: base+'/background.png'} style=styles.backgroundContainer).container
+        ImageBackground.container(source={uri: base+'/background.png'} style=styles.backgroundContainer)
           Portal.Provider
             Header
             Div.break

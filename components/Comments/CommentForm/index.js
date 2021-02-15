@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Div, Span, TextInput, Avatar } from '@startupjs/ui'
+import { Div, TextInput, Avatar } from '@startupjs/ui'
 
 import styles from './index.styl'
 
-const { inputStyle, send } = styles
+const { inputStyle } = styles
 
 const CommentForm = () => {
   const [commentValue, setCommentValue] = useState('')
