@@ -1,9 +1,6 @@
 import React from 'react'
 import { Div, Span, Avatar, Button, Row } from '@startupjs/ui'
-import {
-  faTimes
-} from '@fortawesome/free-solid-svg-icons'
-
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import './index.styl'
 
 const Comment = ({

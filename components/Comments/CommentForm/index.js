@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Div, TextInput, Avatar } from '@startupjs/ui'
+import { Div, TextInput, Avatar, Row } from '@startupjs/ui'
 
 import styles from './index.styl'
 
@@ -9,13 +9,13 @@ const CommentForm = () => {
   const [commentValue, setCommentValue] = useState('')
 
   return pug`
-    Div.commentForm
+    Row.commentForm
       Div.left
         Avatar(src='anonymous_avatar.jpg')
       Div.right
         TextInput(
           placeholder='Reply to this suggestion...'
-          inputStyle=inputStyle
+          inputStyleName=inputStyle
           value=commentValue
           onChangeText=setCommentValue
           multiline

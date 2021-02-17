@@ -1,5 +1,4 @@
 import React from 'react'
-import { View } from 'react-native'
 import { Link, Icon, Div } from '@startupjs/ui'
 import {
   faFacebook,
@@ -10,17 +9,16 @@ import {
 import './index.styl'
 
 const SocialInfo = () => {
-
   return pug`
     Div.container
       Link(to='#')
-        Icon.icon(size='xl' icon=faFacebook)
+        Icon.icon(size='l' icon=faFacebook)
       Link(to='#')
-        Icon.icon(size='xl' icon=faInstagram)
+        Icon.icon(size='l' icon=faInstagram)
       Link(to='#')
-        Icon.icon(size='xl' icon=faLinkedin)
+        Icon.icon(size='l' icon=faLinkedin)
       Link(to='#')
-        Icon.icon.last(size='xl' icon=faTwitter)
+        Icon.icon.last(size='l' icon=faTwitter)
   `
 }
 

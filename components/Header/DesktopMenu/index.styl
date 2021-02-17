@@ -4,14 +4,14 @@
 
 .menuItem
   color rgba(255,255,255, 0.6)
-  font-size 2u
+  font(s)
   line-height 4u
   text-decoration none
   font-weight 400
   text-transform uppercase
   margin 0 1u
   +wide()
-    font-size 2.5u
+    font(xl)
 
 .linkItem
   margin 0 1u
@@ -21,7 +21,7 @@
 .icon
   align-items center
   color rgba(255,255,255, 0.6)
-  font-size 2u
+  font(s)
   line-height 4u
   text-decoration none
   font-weight 400
@@ -29,3 +29,7 @@
 
 .icon
   margin 0 0.5u
+
+.item
+  +wide()
+    font(xl)

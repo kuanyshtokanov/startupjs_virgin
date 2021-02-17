@@ -1,6 +1,6 @@
 import React from 'react'
-import { Image, TouchableOpacity, Text } from 'react-native'
-import { Div, Link, Menu, Icon } from '@startupjs/ui'
+import { Image, TouchableOpacity } from 'react-native'
+import { Div, Link, Menu, Icon, Span } from '@startupjs/ui'
 import {
   faTimes,
   faHeart
@@ -11,7 +11,7 @@ import Profile from '../../Profile'
 import SocialInfo from '../../SocialInfo'
 import './index.styl'
 
-const MobileMenu = ({ open, handleDrawer }) => {
+const MobileMenu = ({ open, menuItems, handleDrawer }) => {
   const base = BASE_URL
 
   return pug`
@@ -23,14 +23,14 @@ const MobileMenu = ({ open, handleDrawer }) => {
         Image.img(source={ uri: base+'/main-logo-white.png' })
         Menu.menu
           Link(to='#').item Valentines
-          Link(to='#').item
-            Text.item V
+          Link(to='#').complexItem
+            Span.item V
             Icon.item(icon=faHeart)
-            Text.item peeps
-          Link(to='#').item
-            Text.item V
+            Span.item peeps
+          Link(to='#').complexItem
+            Span.item V
             Icon.item(icon=faHeart)
-            Text.item prep
+            Span.item prep
           Link(to='#').item Bare it
           Link(to='#').item Culture
           Link(to='#').item Tribe
