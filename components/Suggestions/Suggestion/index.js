@@ -16,12 +16,14 @@ const Suggestion = ({
   text,
   vote,
   comments,
+  id,
   index
 }) => {
+  console.log(index)
   return pug`
-    Div.suggestion
+    Div.root(styleName={ first:index===0 })
       Div.left
-        Span.index #{index}
+        Span.index #{id}
       Div.right
         Span.title #{title}
         Span.author #{authorName}  

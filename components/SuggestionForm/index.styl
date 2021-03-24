@@ -14,13 +14,13 @@
 .icon
   color #cc000c
   +desktop()
+    margin-top 1u
     display none
 
 .title
   font-size 3u
   line-height 5u
   text-transform uppercase
-  margin-bottom 1u
   color #cc000c
   +wide()
     font-size 4u
@@ -30,14 +30,14 @@
   line-height 2u
   text-transform uppercase
   color #cc000c
-  margin-bottom 2u
   +desktop()
     line-height 4u
-    margin-bottom 4u
+    margin-top 1u
   +wide()
     font-size 2.5u
 
 .inputForm
+  margin-top 2u
   display none
   +desktop()
     display flex
@@ -46,7 +46,9 @@
 
 .inputArea
   border-radius 0
-  margin-bottom 1u
+  margin-top 1u
+  &.first
+    margin-top 0
 
 .info
   +tablet()

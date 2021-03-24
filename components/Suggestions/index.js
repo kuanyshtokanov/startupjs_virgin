@@ -8,7 +8,7 @@ const Suggestions = ({ suggestions }) => {
   return pug`
     Div.suggestions
       each suggestion, index in suggestions
-        Suggestion( key=suggestion.id index=suggestion.id ...suggestion )
+        Suggestion( key=suggestion.id index=index id=suggestion.id ...suggestion )
   `
 }
 

@@ -1,5 +1,4 @@
 .root
-  margin-bottom 4u
   width 100%
   z-index 9
   +desktop()
@@ -11,10 +10,13 @@
   flex-direction row
   justify-content center
   align-items center
+  margin 2u 0 3u
+  +desktop()
+    margin 0
 
 .logo
-  display none
-  &.hidden
+  display flex
+  +desktop()
     display flex
 
 .left

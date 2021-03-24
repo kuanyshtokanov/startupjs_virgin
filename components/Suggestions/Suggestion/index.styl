@@ -1,5 +1,7 @@
-.suggestion
-  margin-bottom 3u
+.root
+  margin-top 3u
+  &.first
+    margin-top 0
   +tablet()
     flex-direction row
 
@@ -10,12 +12,9 @@
   height 30px
   border 2px solid rgb(62, 70, 87)
   border-radius 2u
-  margin-bottom 1u
   +tablet()
     width 70px
     height 70px
-    margin-right 2u
-    margin-bottom 0
 
 .index
   font-size 2u
@@ -25,6 +24,10 @@
 .right
   flex-shrink 1
   flex-grow 1
+  margin-top 1u
+  +tablet()
+    margin-top 0
+    margin-left 2u
 
 .title
   font-size 2u
@@ -50,7 +53,6 @@
   flex-direction row
   justify-content space-between
   align-items center
-  margin-bottom 2u
 
 .bottomLeft
   flex-direction row

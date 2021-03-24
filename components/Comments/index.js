@@ -9,7 +9,7 @@ const Comments = ({
   comments
 }) => {
   return pug`
-    Div.comments
+    Div.root
       each comment, index in comments
         Comment(key=index ...comment last=index===comments.length-1)
       CommentForm

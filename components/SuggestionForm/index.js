@@ -31,7 +31,7 @@ const SuggestionForm = () => {
             Icon.icon(icon=faChevronUp size='xl')
       H3.hint We love to hear new ideas on how to be even more awesome
       Div.inputForm(styleName=[{ visible:open }])
-        TextInput.inputArea(
+        TextInput.inputArea.first(
           placeholder='Title of suggestion'
           inputStyle=inputArea
           value=title
