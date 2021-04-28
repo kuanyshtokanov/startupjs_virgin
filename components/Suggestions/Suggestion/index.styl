@@ -1,0 +1,76 @@
+.root
+  margin-top 3u
+  &.first
+    margin-top 0
+  +tablet()
+    flex-direction row
+
+.left
+  align-items center
+  justify-content center
+  width 30px
+  height 30px
+  border 2px solid rgb(62, 70, 87)
+  border-radius 2u
+  +tablet()
+    width 70px
+    height 70px
+
+.index
+  font-size 2u
+  +tablet()
+    font-size 4u
+
+.right
+  flex-shrink 1
+  flex-grow 1
+  margin-top 1u
+  +tablet()
+    margin-top 0
+    margin-left 2u
+
+.title
+  font-size 2u
+  line-height 2u
+  text-transform uppercase
+
+.author
+  color #cc000c
+  margin-top 1u
+
+.time
+  font-size 1.5u
+  color #b0b0b0
+
+.text
+  margin-top 1u
+
+.check, .remove, .heart, .manageTxt, .vote
+  color #cc000c
+
+.bottom
+  margin-top 1u
+  flex-direction row
+  justify-content space-between
+  align-items center
+
+.bottomLeft
+  flex-direction row
+  align-items center
+
+.vote
+  text-transform uppercase
+  margin-left .5u
+
+.bottomRight
+  flex-direction row
+  align-items center
+
+.manage
+  flex-direction row
+  align-items center
+  margin-left 1u
+
+.manageTxt
+  margin-left .5u
+  text-transform uppercase

@@ -1,9 +1,14 @@
 import React from 'react'
+import { Image } from 'react-native'
 import { observer, emit, useValue, useLocal } from 'startupjs'
-import './index.styl'
-import { Row, Div, Layout, SmartSidebar, Menu, Button, H1 } from '@startupjs/ui'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { Row, Div, Layout, SmartSidebar, Menu, Button, H1, Icon, Span } from '@startupjs/ui'
+import { BASE_URL } from '@env'
+import { faBars, faHeart } from '@fortawesome/free-solid-svg-icons'
+import SocialInfo from 'components/SocialInfo'
 import APP from '../../app.json'
+import { menuItems } from '../../consts'
+
+import './index.styl'
 
 const { displayName } = APP
 
@@ -12,21 +17,48 @@ const APP_NAME = displayName.charAt(0).toUpperCase() + displayName.slice(1)
 const MenuItem = observer(({ url, children }) => {
   const [currentUrl] = useLocal('$render.url')
   return pug`
-    Menu.Item(
-      active=currentUrl === url
-      onPress=() => emit('url', url)
-    )= children
+    case children
+      when 'PREP'
+        Menu.Item.menuItem(
+          active=currentUrl === url
+          onPress=() => emit('url', url)
+        )
+          Row.rowMenu
+            Span.item V
+            Icon.item(icon=faHeart)
+            Span.item=children
+      when 'PEEPS'
+        Menu.Item.menuItem(
+          active=currentUrl === url
+          onPress=() => emit('url', url)
+        )
+          Row.rowMenu
+            Span.item V
+            Icon.item(icon=faHeart)
+            Span.item=children
+      default
+        Menu.Item.menuItem(
+          active=currentUrl === url
+          onPress=() => emit('url', url)
+        )
+          Span.item=children
+    
   `
 })
 
 export default observer(function ({ children }) {
   const [opened, $opened] = useValue(false)
+  const base = BASE_URL
 
   function renderSidebar () {
     return pug`
       Menu.sidebar-menu
-        MenuItem(url='/') App
-        MenuItem(url='/about') About
+        Div.logoDiv
+          Image.img(source={ uri: base+'/main-logo-white.png' })
+        each item, index in menuItems
+          MenuItem(key=index url='/')=item
+        Div.social
+          SocialInfo
     `
   }
 

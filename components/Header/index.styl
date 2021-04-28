@@ -1,0 +1,57 @@
+.root
+  width 100%
+  z-index 9
+  +desktop()
+    justify-content space-between
+    justify-items center
+    flex-direction row
+
+.top
+  flex-direction row
+  justify-content center
+  align-items center
+  margin 2u 0 3u
+  +desktop()
+    margin 0
+
+.logo
+  display flex
+  +desktop()
+    display flex
+
+.left
+  justify-content space-between
+  +desktop()
+    flex-direction row
+    align-items center
+
+.menuIcon
+  display flex
+  +desktop()
+    display none
+
+.bars
+  align-self flex-end
+  color white
+  &.hidden
+    display flex
+
+.mobileMenu
+  display none
+  &.visible
+    display flex
+
+.menuBig
+  display none
+  +desktop()
+    display flex
+    align-self flex-end
+
+.right
+  display none
+  +desktop()
+    display flex
+    margin-top 1.5u
+    flex-direction row
+    align-items center
+    height 50px

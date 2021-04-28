@@ -1,0 +1,71 @@
+.root
+  background-color #f7f7f7
+  padding 2u
+  +tablet()
+    padding 4u 4u 2u
+  +desktop()
+    padding 4u
+
+.top
+  flex-direction row
+  justify-content space-between
+  align-items center
+
+.icon
+  color #cc000c
+  +desktop()
+    margin-top 1u
+    display none
+
+.title
+  font-size 3u
+  line-height 5u
+  text-transform uppercase
+  color #cc000c
+  +wide()
+    font-size 4u
+
+.hint
+  font-size 1.5u
+  line-height 2u
+  text-transform uppercase
+  color #cc000c
+  +desktop()
+    line-height 4u
+    margin-top 1u
+  +wide()
+    font-size 2.5u
+
+.inputForm
+  margin-top 2u
+  display none
+  +desktop()
+    display flex
+  &.visible
+    display flex
+
+.inputArea
+  border-radius 0
+  margin-top 1u
+  &.first
+    margin-top 0
+
+.info
+  +tablet()
+    flex-direction row
+    justify-content space-between
+    align-items center
+
+.contactTxt
+  color #9a9a9a
+
+.email
+  color #cc000c
+
+.button
+  margin-top 2u
+  border-radius 0
+  +tablet()
+    margin-left auto
+    padding-left 4u
+    padding-right 4u
